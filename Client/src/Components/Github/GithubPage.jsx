@@ -9,7 +9,7 @@ const GitHubData = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://leetcode.com/${username}`
+          `GET https://api.linkedin.com/v2/me/${username}`
         );
         setData(response.data);
         console.log(response.data);
@@ -49,7 +49,7 @@ const GitHubData = () => {
         onChange={handleInputChange}
         placeholder="Enter GitHub username"
       />
-      <h2>{data.name}</h2>
+      <h2 className="text-[10px]">{data.name}</h2>
       <p>{data.bio}</p>
       <p>Followers: {data.followers}</p>
       <p>Repositories: {data.public_repos}</p>

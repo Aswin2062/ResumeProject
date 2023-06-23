@@ -62,11 +62,13 @@ const GitHubData = () => {
           onChange={handleInputChange}
           placeholder="Enter GitHub username"
         />
-        <h2>{data.name}</h2>
-        <p>{data.bio}</p>
-        <p>Followers: {data.followers}</p>
-        <img src={data.avatar_url} alt="" />
-        <p>Repositories: {data.public_repos}</p>
+        <div>
+          <h2 className="text-[10px]">{data.name}</h2>
+          <p>{data.bio}</p>
+          <p>Followers: {data.followers}</p>
+          <img src={data.avatar_url} alt="" />
+          <p>Repositories: {data.public_repos}</p>
+        </div>
       </div>
     </div>
   );

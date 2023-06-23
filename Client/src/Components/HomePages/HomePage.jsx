@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../Login/Header";
+import LeetcodePage from "../Leetcode/LeetcodePage";
 
 const GitHubData = () => {
   const [username, setUsername] = useState("");
@@ -11,6 +12,7 @@ const GitHubData = () => {
       try {
         const response = await axios.get(
           `https://api.github.com/users/${username}`
+          
         );
         setData(response.data);
       } catch (error) {
@@ -31,6 +33,8 @@ const GitHubData = () => {
     return (
       <div>
         <Header />
+        <LeetcodePage />
+
         <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[35%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
           <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
             Github UserName
@@ -51,6 +55,7 @@ const GitHubData = () => {
   return (
     <div>
       <Header />
+      <LeetcodePage />
       <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[35%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
         <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
           Github UserName

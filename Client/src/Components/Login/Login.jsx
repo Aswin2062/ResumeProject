@@ -1,6 +1,8 @@
 import React from "react";
 import footer from "./Image/footerl.svg";
+import Marryboat from "./Image/marry1.png"
 import Header from "./Header";
+import Sun from "./Image/sun1.png"
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -33,6 +35,7 @@ export default function Login() {
       <div>
         <Header />
       </div>
+      <img src={Sun} className="absolute mt-[50px] ml-[80px]"></img>
       <div className="w-[450px] h-[300px] ml-[35%] mt-[10%] rounded-[10px] pt-[50px] bg-[#C2C2C2] items-center gap-[30px]  flex flex-col">
         <p className=" flex">Welcome</p>
         <form
@@ -61,8 +64,14 @@ export default function Login() {
           </button>
         </form>
       </div>
-      <div className="mt-[10%]">
-        <img src={footer} alt="" />
+      <div className=" ">
+        <img
+          src={Marryboat}
+          alt=""
+          className="w-[30%] h-[30%]  ml-[60%] absolute"
+        />
+
+        <img src={footer} alt="" className="pt-[170px]" />
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ const LeetcodePage = () => {
 
   if (!data) {
     return (
-      <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[35%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
+      <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[10%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
         <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
           leetcode UserName
         </h1>
@@ -46,7 +46,7 @@ const LeetcodePage = () => {
   }
 
   return (
-    <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[35%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
+    <div className="w-[400px] bg-[#ecf7f3] h-[200px] ml-[10%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
       <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
         leetcode UserName
       </h1>
@@ -57,10 +57,30 @@ const LeetcodePage = () => {
         onChange={handleInputChange}
         placeholder="Enter GitHub username"
       />
-      <h2 className="text-[10px]">{data.name}</h2>
-      <div>{data.acceptanceRate}</div>
-      <p>Followers: {data.followers}</p>
-      <p>Repositories: {data.public_repos}</p>
+      <div className="p-[20px] gap-[10px] w-[500px] bg-[#dfc5f1] h-[900px]  flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
+        <h2 className="text-[10px]">{data.name}</h2>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          AcceptanceRate : {data.acceptanceRate}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          ContributionPoints : {data.contributionPoints}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          Ranking : {data.ranking}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          TotalSolved : {data.totalSolved}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          EasySolved : {data.easySolved}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          HardSolved : {data.followers}
+        </p>
+        <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
+          MediumSolved : {data.mediumSolved}
+        </p>
+      </div>
     </div>
   );
 };

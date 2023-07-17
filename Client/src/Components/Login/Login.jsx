@@ -22,7 +22,7 @@ export default function Login() {
 
     if (Username === "aswin" && Password === "aswin") {
       console.log("Login successful");
-      Navigate("./homepage");
+      Navigate("./home");
     } else {
       console.log("Login failed");
       setError("Invalid username or password.");
@@ -35,7 +35,7 @@ export default function Login() {
       <div>
         <Header />
       </div>
-      <img src={Sun} className="absolute mt-[50px] ml-[80px]"></img>
+      {/* <img src={Sun} className="absolute mt-[50px] ml-[80px]"></img> */}
       <div className="w-[450px] h-[300px] ml-[35%] mt-[10%] rounded-[10px] pt-[50px] bg-[#C2C2C2] items-center gap-[30px]  flex flex-col">
         <p className=" flex">Welcome</p>
         <form
@@ -65,11 +65,11 @@ export default function Login() {
         </form>
       </div>
       <div className=" ">
-        <img
+        {/* <img
           src={Marryboat}
           alt=""
           className="w-[30%] h-[30%]  ml-[60%] absolute"
-        />
+        /> */}
 
         <img src={footer} alt="" className="pt-[170px]" />
       </div>

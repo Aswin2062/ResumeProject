@@ -3,11 +3,10 @@ import axios from "axios";
 import Header from "../Login/Header";
 import LeetcodePage from "../Leetcode/LeetcodePage";
 import Background from "../Login/Image/background.png"
-import Marryboat from "../Login/Image/marry1.png"
-import footer from "../Login/Image/footerl.svg";
+import Footer from "../Footer/Footer"
 
 
-const GitHubData = () => {
+const GitHub = () => {
   const [username, setUsername] = useState("");
   const [data, setData] = useState(null);
 
@@ -36,14 +35,10 @@ const GitHubData = () => {
   if (!data) {
     return (
       <div
-        className="bg-cover bg-center bg-no-repeat h-screen"
-        style={{ Background: `url(${Background})` }}
       >
-        <Header />
+     
         <div className="flex">
-          <LeetcodePage />
-
-          <div className="w-[400px] bg-[#f6b8c0] h-[200px] ml-[25%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
+          <div className="w-[400px] bg-[#f6b8c0] h-[200px]  flex flex-col  gap-[20px] rounded-lg shadow-2xl">
             <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
               Github UserName
             </h1>
@@ -57,28 +52,16 @@ const GitHubData = () => {
             <div className=" ml-[130px]">Loading...</div>
           </div>
         </div>
-        <div className=" ">
-          <img
-            src={Marryboat}
-            alt=""
-            className="w-[30%] h-[30%]  ml-[60%] absolute"
-          />
-
-          <img src={footer} alt="" className="pt-[170px]" />
-        </div>  
       </div>
     );
   }
 
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat h-screen"
-      style={{ Background: `url(${Background})` }}
     >
-      <Header />
-      <div className="flex ">
-        <LeetcodePage />
-        <div className="w-[400px] bg-[#f6b8c0] h-[200px] ml-[25%] flex flex-col mt-[100px] gap-[20px] rounded-lg shadow-2xl">
+     
+      <div className="flex mb-[90%]">
+        <div className="w-[400px] bg-[#f6b8c0] h-[200px]  flex flex-col  gap-[20px] rounded-lg shadow-2xl">
           <h1 className="text-[20px] font-bold	font-sans	pl-[100px] pt-[50px]">
             Github UserName
           </h1>
@@ -101,9 +84,7 @@ const GitHubData = () => {
             <h2 className="text-[30px] font-semibold ml-[50px]	 not-italic	">
               Username : {data.name}
             </h2>
-            <p className="text-[30px] font-semibold ml-[50px]	 not-italic	">
-              {data.bio}
-            </p>
+            
             <p className="text-[30px] font-semibold	 ml-[50px] not-italic	">
               Followers: {data.followers}
             </p>
@@ -117,17 +98,8 @@ const GitHubData = () => {
           </div>
         </div>
       </div>
-      {/* <div className=" ">
-        <img
-          src={Marryboat}
-          alt=""
-          className="w-[30%] h-[30%]  ml-[60%] absolute"
-        />
-
-        <img src={footer} alt="" className="pt-[170px]" />
-      </div> */}
     </div>
   );
 };
 
-export default GitHubData;
+export default GitHub;
